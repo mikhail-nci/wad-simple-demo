@@ -1,10 +1,10 @@
-var http = require('http');
-var path = require('path');
-var express = require('express');
-var bodyParser = require('body-parser');
-var fs = require('fs');
-var js2xmlparser = require("js2xmlparser");
-var libxslt = require('libxslt');
+var http = require('http'),
+    path = require('path'),
+    express = require('express'),
+    bodyParser = require('body-parser'),
+    fs = require('fs'),
+    js2xmlparser = require('js2xmlparser'),
+    libxslt = require('libxslt');
 
 var router = express();
 var server = http.createServer(router);
@@ -57,7 +57,7 @@ router.post('/post/json', function(req, res) {
     fs.writeFileSync('Countries.json', JSONformated);
 
     // Convert the updated JSON file to XML     
-    var XMLformated = js2xmlparser("countries", JSONformated);
+    var XMLformated = js2xmlparser.parse("countries", JSON.parse(JSONformated));
 
     // Write the resulting XML back to the system
     fs.writeFileSync('Countries.xml', XMLformated);

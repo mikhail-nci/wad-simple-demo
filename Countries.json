@@ -1749,34 +1749,6 @@
             "Name": "Zimbabwe",
             "Capital": "Harare",
             "Phone_code": 263
-        },
-        {
-            "Country_code": "sdsd",
-            "Region": "asdasdas",
-            "Name": "1111",
-            "Capital": "111",
-            "Phone_code": "111"
-        },
-        {
-            "Country_code": "111111",
-            "Region": "",
-            "Name": "",
-            "Capital": "",
-            "Phone_code": ""
-        },
-        {
-            "Country_code": "111111",
-            "Region": "",
-            "Name": "",
-            "Capital": "",
-            "Phone_code": ""
-        },
-        {
-            "Country_code": "444444",
-            "Region": "",
-            "Name": "",
-            "Capital": "4444",
-            "Phone_code": ""
         }
     ]
 }
