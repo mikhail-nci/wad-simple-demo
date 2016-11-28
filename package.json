@@ -1,0 +1,23 @@
+{
+  "name": "wad-simple-demo",
+  "version": "1.0.0",
+  "description": "demo app to make AJAX requests to load results of XSL transformation and send POST requests to add new information to JSON and XML files",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "fs": "0.0.1-security",
+    "js2xmlparser": "^2.0.2",
+    "libxslt": "^0.6.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikhail-nci/wad-simple-demo.git"
+  },
+  "author": "Mikhail",
+  "homepage": "https://github.com/mikhail-nci/wad-simple-demo#readme"
+}
