@@ -1750,4 +1750,11 @@
     <Capital>Harare</Capital>
     <Phone_code>263</Phone_code>
   </country>
+  <country>
+    <Country_code>a</Country_code>
+    <Region>b</Region>
+    <Name>c</Name>
+    <Capital>d</Capital>
+    <Phone_code>f</Phone_code>
+  </country>
 </countries>

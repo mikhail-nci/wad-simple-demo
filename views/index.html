@@ -19,6 +19,21 @@
       border: 1px solid black;
       text-align: center;
     }
+    table {
+      border-collapse: collapse;
+    }
+    td, th {
+      border: 1px solid #999;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    th {
+      font-weight: bold;
+    }
+    .selected {
+      background-color:brown;
+      color: #FFF;
+    }
   </style>
   <script src="/js/jquery.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>
@@ -29,6 +44,17 @@
         cache: false,
         success: function(html) {
           $("#results").append(html);
+          $("#table tbody tr").click( function () {
+            $(".selected").removeClass("selected");
+            $(this).addClass("selected");
+            var $row=$(this).attr("id");
+              $.ajax({
+                url: "/post/delete",
+                cache: false,
+                type: "POST",
+                data: { row:$row }
+                 })
+          })
         }
       });
     };
