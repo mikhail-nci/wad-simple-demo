@@ -38,29 +38,47 @@
   <script src="/js/jquery.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>
   <script>
-    function load() {
-      $.ajax({
-        url: "/get/html",
-        cache: false,
-        success: function(html) {
-          $("#results").append(html);
-          $("#table tbody tr").click( function () {
-            $(".selected").removeClass("selected");
-            $(this).addClass("selected");
-            var $row=$(this).attr("id");
-              $.ajax({
-                url: "/post/delete",
-                cache: false,
-                type: "POST",
-                data: { row:$row }
-                 })
+      function draw_table() {
+        $("#results").empty();
+        $.getJSONUncached = function(url) {
+          return $.ajax({
+            url: url,
+            type: 'GET',
+            cache: false,
+            success: function(html) {
+            $("#results").append(html);
+            select_row();
+            }
+          });
+        };
+        $.getJSONUncached("/get/html")
+      }
+    
+      function select_row() {
+        $("#table tbody tr").click(function() {
+          $(".selected").removeClass("selected");
+          $(this).addClass("selected");
+          var $row = $(this).attr("id");
+          delete_row($row);
+        })
+      };
+    
+      function delete_row(row_val) {
+        $("#delete").click(function() {
+          $.ajax({
+            url: "/post/delete",
+            type: "POST",
+            data: {
+              row: row_val
+            },
+            cache: false,
+            success: setTimeout(draw_table,2000)
           })
-        }
-      });
-    };
-
+        })
+      }
+    
     $(document).ready(function() {
-      load();
+      draw_table();
     });
   </script>
 </head>
@@ -100,6 +118,7 @@
                 <button type="submit">Submit</button>
               </div>
             </form>
+                <button id="delete">Delete</button>
           </li>
         </ul>
       </div>

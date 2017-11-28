@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <countries>
   <country>
-    <Country_code>AF</Country_code>
-    <Region>AS</Region>
-    <Name>Afghanistan</Name>
-    <Capital>Kabul</Capital>
-    <Phone_code>93</Phone_code>
-  </country>
-  <country>
-    <Country_code>AX</Country_code>
-    <Region>EU</Region>
-    <Name>Aland Islands</Name>
-    <Capital>Mariehamn</Capital>
-    <Phone_code>+358-18</Phone_code>
-  </country>
-  <country>
     <Country_code>AL</Country_code>
     <Region>EU</Region>
     <Name>Albania</Name>
@@ -1749,12 +1735,5 @@
     <Name>Zimbabwe</Name>
     <Capital>Harare</Capital>
     <Phone_code>263</Phone_code>
-  </country>
-  <country>
-    <Country_code>a</Country_code>
-    <Region>b</Region>
-    <Name>c</Name>
-    <Capital>d</Capital>
-    <Phone_code>f</Phone_code>
   </country>
 </countries>
